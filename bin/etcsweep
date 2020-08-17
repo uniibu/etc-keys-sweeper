@@ -1,0 +1,5 @@
+#!/usr/bin/env node
+
+const toAddress = process.argv.slice(2);
+const sweep = require("../");
+sweep(...toAddress);

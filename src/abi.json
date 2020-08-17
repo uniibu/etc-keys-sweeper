@@ -1,0 +1,1 @@
+[{"type":"fallback","stateMutability":"nonpayable"},{"type":"function","stateMutability":"view","outputs":[{"type":"uint256[]","name":"","internalType":"uint256[]"}],"name":"balances","inputs":[{"type":"address[]","name":"users","internalType":"address[]"},{"type":"address","name":"tokens","internalType":"address"}]}]
