@@ -1,6 +1,6 @@
 {
   "name": "@unibtc/etc-keys-sweeper",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Ethereum classic keys sweeper. Scans your parity keys and sweeps to your given address",
   "main": "index.js",
   "bin": {

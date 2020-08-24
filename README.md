@@ -3,7 +3,7 @@ Ethereum classic keys sweeper. Scans your parity keys and sweeps to your given a
 
 ## Commands
 
-`etcsweep toAddress backuppath[optional]`
+`etcsweep toAddress secretkey backuppath[optional]`
 Example:
-`etcsweep 0xe9b1a2164368c00fc93e0e749d9b3cafa1bc6ee2` - will default to `~/etcbackup/ethereum-keys.tar.gz`
-`etcsweep 0xe9b1a2164368c00fc93e0e749d9b3cafa1bc6ee2 /home/user/etckeys.tar.gz` - will use `/home/user/etckeys.tar.gz`
+`etcsweep 0xe9b1a2164368c00fc93e0e749d9b3cafa1bc6ee2 secretkey` - will default to `~/etcbackup/ethereum-keys.tar.gz`
+`etcsweep 0xe9b1a2164368c00fc93e0e749d9b3cafa1bc6ee2 secretkey /home/user/etckeys.tar.gz` - will use `/home/user/etckeys.tar.gz`

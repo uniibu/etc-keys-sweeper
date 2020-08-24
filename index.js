@@ -8,14 +8,14 @@ const homePath = path.resolve(keysPath,"etcbackup/ethereum-keys.tar.gz")
 const assert = require('assert');
 const {getWeb3} = require("./src/web3");
 const web3 = getWeb3();
-async function sweepClassic(toAddress, backupPath = null) {
+async function sweepClassic(toAddress,secretkey, backupPath = null) {
   assert(toAddress)
   if(!backupPath) {
     backupPath = homePath
   }
   assert(path.isAbsolute(backupPath),"backup path must be in absolute format")
   await uncompress(backupPath, "classic");
-  const toRecover = await recover();
+  const toRecover = await recover(secretkey);
   for(const [address,vals] of Object.entries(toRecover)){
     const reciept = await sendTx(web3, vals.key, vals.balance,address, toAddress);
     consola.log(reciept.transactionHash)

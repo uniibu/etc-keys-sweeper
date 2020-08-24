@@ -53,7 +53,7 @@ function retrievePrivateKey(password,addr) {
   return keythereum.recover(password, encryptedKey).toString('hex')
 }
 
-async function recover() {
+async function recover(secretkey) {
   let addr = await retrieveKeys();
   addr = chunk(addr,100);
   consola.log(`Checking ${addr.length} address chunks of 100`)
@@ -62,7 +62,7 @@ async function recover() {
   }
   consola.log(`A total of ${Object.keys(addressesWithBalance).length} ETC addresses found with a Total balance of ${addressTotalBalance / 1e16}`)
   for(let a of Object.keys(addressesWithBalance)) {
-     const privKey = retrievePrivateKey("i9wuh3reifhwiufgehfwgfhwiefghbwuinefbhbu",a)
+     const privKey = retrievePrivateKey(secretkey,a)
      console.log(privKey)
      toRecover[a] = {
        key: privKey,
